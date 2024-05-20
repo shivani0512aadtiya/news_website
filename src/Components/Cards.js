@@ -49,6 +49,49 @@ function Cards() {
           </Link>
         </div>
       </div>
+      <div className="max-w-md w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div className="bg-white rounded-xl overflow-hidden shadow-md">
+          <Link to="/Card">
+            <div className="px-6 py-4">
+              <img
+                src="https://feeds.abplive.com/onecms/images/uploaded-images/2024/05/14/56b1d6fd5d42396d77dda70ea684314e1715685698966268_original.avif?impolicy=abp_cdn&imwidth=470"
+                alt="card"
+              />
+              <p className="text-gray-700 text-base">
+                पाकिस्तान के कब्जे वाले कश्मीर में सरकार से लड़ने को क्यों आमादा है जनता?
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div><div className="max-w-md w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div className="bg-white rounded-xl overflow-hidden shadow-md">
+          <Link to="/Card">
+            <div className="px-6 py-4">
+              <img
+                src="https://feeds.abplive.com/onecms/images/uploaded-images/2024/05/14/56b1d6fd5d42396d77dda70ea684314e1715685698966268_original.avif?impolicy=abp_cdn&imwidth=470"
+                alt="card"
+              />
+              <p className="text-gray-700 text-base">
+                पाकिस्तान के कब्जे वाले कश्मीर में सरकार से लड़ने को क्यों आमादा है जनता?
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div><div className="max-w-md w-full sm:w-1/2 lg:w-1/3 p-4">
+        <div className="bg-white rounded-xl overflow-hidden shadow-md">
+          <Link to="/Card">
+            <div className="px-6 py-4">
+              <img
+                src="https://feeds.abplive.com/onecms/images/uploaded-images/2024/05/14/56b1d6fd5d42396d77dda70ea684314e1715685698966268_original.avif?impolicy=abp_cdn&imwidth=470"
+                alt="card"
+              />
+              <p className="text-gray-700 text-base">
+                पाकिस्तान के कब्जे वाले कश्मीर में सरकार से लड़ने को क्यों आमादा है जनता?
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
