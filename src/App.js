@@ -1,10 +1,12 @@
 import './App.css';
 import React, { Component } from 'react'
-// import Navbar from './Components/Navbar';
-// import News from './Components/News';
-import NewsUpdate from './Components/NewsUpdate';
-import Navbarnew from './Components/Navbarnew';
+
 import Navbar from './Components/Navbar';
+import News from './Components/News';
+import Footer from './Components/Footer';
+import Card from './Components/Card';
+import Cards from './Components/Cards';
+
 
 export default class App extends Component {
   
@@ -12,9 +14,9 @@ export default class App extends Component {
     return (
       <div>
         <Navbar/>
-        // <Navbarnew/>
-         
-        // <NewsUpdate/>
+        <Card/>
+        <Cards/>
+        <Footer/>
       </div>
     )
   }
