@@ -10,6 +10,7 @@ import News from './Components/News'
 const App = () => {
   return (
     <>
+
        <Navbar/>
        <div>
         <Routes>
@@ -18,6 +19,7 @@ const App = () => {
         </Routes>
        </div>
         <Footer/>
+        <div>hii</div>
     </>
   )
 }
