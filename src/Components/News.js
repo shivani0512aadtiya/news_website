@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const News = () => {
   const team = [
@@ -59,7 +60,23 @@ const News = () => {
   ];
   return (
     <div>
-      <section className="py-14 ">
+      <section className="w-full h-[400px] mt-24 bg-[#e5e5e5] flex items-center justify-center">
+        <div className="mr-12">
+       <img src=""/>
+        </div>
+        <div>
+        <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              Meet our team of Engineers, designers, and product managers.
+            </h3>
+            <p className="text-gray-600 mt-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.Lorem Ipsum has been the industrys standard dummy.
+            </p>
+        </div>
+       
+      </section>
+
+      <section className="py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 m-4">
           <div className="max-w-xl">
             <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
@@ -88,7 +105,7 @@ const News = () => {
                     <p className="text-indigo-600">{item.title}</p>
                     <p className="text-gray-600 mt-2">{item.desc}</p>
                     <div className="mt-3 flex gap-4 text-gray-400">
-                      <a href={item.twitter}>
+                      <Link to={item.twitter}>
                         <svg
                           className="w-5 h-5 duration-150 hover:text-gray-500"
                           fill="currentColor"
@@ -106,8 +123,8 @@ const News = () => {
                             </clipPath>
                           </defs>
                         </svg>
-                      </a>
-                      <a href={item.github}>
+                      </Link>
+                      <Link to={item.github}>
                         <svg
                           className="w-5 h-5 duration-150 hover:text-gray-500"
                           fill="currentColor"
@@ -127,8 +144,8 @@ const News = () => {
                             </clipPath>
                           </defs>
                         </svg>
-                      </a>
-                      <a href={item.linkedin}>
+                      </Link>
+                      <Link to={item.linkedin}>
                         <svg
                           className="w-5 h-5 duration-150 hover:text-gray-500"
                           fill="none"
@@ -146,7 +163,7 @@ const News = () => {
                             </clipPath>
                           </defs>
                         </svg>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </li>

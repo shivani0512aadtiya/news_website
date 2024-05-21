@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <a href="https://flowbite.com/" className="flex items-center ">
+            <Link to="https://flowbite.com/" className="flex items-center ">
               <img
                 src="img/Tni 1.png"
                 className="h-21 w-32"
@@ -21,46 +22,46 @@ const Navbar = () => {
               <span className="ml-2 text-2xl font-semibold dark:text-black">
                  
               </span>
-            </a>
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
               >
                 Home
-              </a>
-              <a
-                href="/news"
+              </Link>
+              <Link
+                to="/news"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
               >
                 News
-              </a>
-              <a
-                href="/khategaon"
+              </Link>
+              <Link
+                to="/khategaon"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
               >
                 Khategaon
-              </a>
-              <a
-                href="/kannod"
+              </Link>
+              <Link
+                to="/kannod"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
               >
                 Kannod
-              </a>
-              <a
-                href="/nemawar"
+              </Link>
+              <Link
+                to="/nemawar"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
               >
                 Nemawar
-              </a>
-              <a
-                href="/dewas"
+              </Link>
+              <Link
+                to="/dewas"
                 className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
               >
                 Dewas
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex md:hidden">
@@ -113,42 +114,42 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-white"
             >
               Home
-            </a>
-            <a
-              href="/news"
+            </Link>
+            <Link
+              to="/news"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
             >
               News
-            </a>
-            <a
-              href="/khategaon"
+            </Link>
+            <Link
+              to="/khategaon"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
             >
               Khategaon
-            </a>
-            <a
-              href="/kannod"
+            </Link>
+            <Link
+              to="/kannod"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
             >
               Kannod
-            </a>
-            <a
-              href="/nemawar"
+            </Link>
+            <Link
+              to="/nemawar"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
             >
               Nemawar
-            </a>
-            <a
-              href="/dewas"
+            </Link>
+            <Link
+              to="/dewas"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
             >
               Dewas
-            </a>
+            </Link>
           </div>
         </div>
       )}
