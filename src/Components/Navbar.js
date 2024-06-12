@@ -19,15 +19,10 @@ const Navbar = () => {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center ">
-                <img
-                  src="img/Tni 1.png"
-                  className="h-21 w-32"
-                  alt="Flowbite Logo"
-                />
-                <span className="ml-2 text-2xl font-semibold dark:text-black">
-                </span>
-              </Link>
+              <Link to="/" className="flex items-center space-x-8">
+            <img src="img/Tni 1.png" className="h-32" alt="Times Now India Logo" loading="lazy" />
+              <span className="space-x-12 text-2xl font-semibold">Times Now India</span>
+            </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
