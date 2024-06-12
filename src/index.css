@@ -16,3 +16,17 @@
         transform: translateY(0)
     }
 }
+@keyframes slide-left-to-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-enter {
+    animation: slide-left-to-right 1s forwards;
+  }
+ 
+ 
