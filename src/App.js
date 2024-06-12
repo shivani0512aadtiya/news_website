@@ -65,52 +65,5 @@ const App = () => {
 export default App;
 
 
-// import React, { useState, useEffect } from 'react';
-// import { Route, Routes, Navigate } from 'react-router-dom';
-// import Navbar from './Components/Navbar';
-// import Footer from './Components/Footer';
-// import Home from './Components/Home';
-// import Description from './Breakingnews2/Description';
-// import News from './Components/News';
-// import Breakingrow from './Components/Breakingrow';
-// import Madhyapradesh from './States/Madhyapradesh';
-// import Login from './Adminpanel/Login';
-// import Admins from './Adminpanel/Admins';
-// // import CardDetail from './Card.js/CardDetail';
 
-// const App = () => {
-//   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-//   useEffect(() => {
-//     const token = localStorage.getItem('token');
-//     if (token) {
-//       setIsAuthenticated(true);
-//     }
-//   }, []);
-
-//   const handleLogout = () => {
-//     localStorage.removeItem('token');
-//     setIsAuthenticated(false);
-//   };
-
-//   return (
-//     <>
-//       <Navbar />
-//       <Breakingrow />
-//       <div>
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/description" component={Description} />
-//           {/* <Route path="/card/:id" component={CardDetail} /> */}
-//           <Route path="/news" element={<News />} />
-//           <Route path="/mp" element={<Madhyapradesh />} />
-//           <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login setIsAuthenticated={setIsAuthenticated} />} />
-//           <Route path="/admin" element={<Admins isAuthenticated={isAuthenticated} handleLogout={handleLogout} />} />
-//         </Routes>
-//       </div>
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default App;
