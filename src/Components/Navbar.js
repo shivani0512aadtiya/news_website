@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <Link to="https://www.timesnownews.com/" className="flex items-center ">
+              <Link to="/" className="flex items-center ">
                 <img
                   src="img/Tni 1.png"
                   className="h-21 w-32"
