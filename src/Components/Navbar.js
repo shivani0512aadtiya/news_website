@@ -22,7 +22,6 @@ const closeMenu = () => {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-<<<<<<< HEAD
               <Link to="/" className="flex items-center ">
                 <img
                   src="img/Tni 1.png"
@@ -32,12 +31,6 @@ const closeMenu = () => {
                 <span className="ml-2 text-2xl font-semibold dark:text-black">
                 </span>
               </Link>
-=======
-              <Link to="/" className="flex items-center space-x-8">
-            <img src="img/Tni 1.png" className="h-21 w-32" alt="Times Now" loading="lazy" />
-              <span className="ml-2 text-2xl font-semibold dark:text-black">Times Now India</span>
-            </Link>
->>>>>>> 785cbc34c29d32338f7fe3f0411e8b148eaab065
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
