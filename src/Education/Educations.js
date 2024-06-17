@@ -2,11 +2,21 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../Admineditor.js/AuthProvider';
 import Addsiksha from './Addsiksha';
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  WhatsappShareButton,
+  EmailIcon,
+  FacebookIcon,
+  WhatsappIcon
+} from "react-share";
+import ShareIcon from '@mui/icons-material/Share';
 
 function Educations() {
   const { isAuthenticated, token } = useAuth();
   const [education, setEducation] = useState([]);
   const [expandedItems, setExpandedItems] = useState({});
+  const [openDropdowns, setOpenDropdowns] = useState({});
 
   useEffect(() => {
     const getData = async () => {
@@ -63,6 +73,20 @@ function Educations() {
     }));
   };
 
+  const toggleDropdown = (index) => {
+    setOpenDropdowns((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const closeDropdown = (index) => {
+    setOpenDropdowns((prev) => ({
+      ...prev,
+      [index]: false,
+    }));
+  };
+
   return (
     <div className="flex justify-center space-x-4">
       {isAuthenticated && <Addsiksha onAddeducation={handleAddeducation} />}
@@ -77,6 +101,32 @@ function Educations() {
               className="block w-80 h-auto object-cover rounded mb-2"
               loading="lazy"
             />
+            {openDropdowns[index] && (
+                    <div className="absolute flex left-20  bg-white shadow-lg rounded">
+                      <div className="p-2">
+                        <FacebookShareButton url={item.file.url} onClick={() => closeDropdown(index)}>
+                          <FacebookIcon size={30} round={true} />
+                        </FacebookShareButton>
+                      </div>
+                      <div className="p-2">
+                        <WhatsappShareButton url={item.file.url} onClick={() => closeDropdown(index)}>
+                          <WhatsappIcon size={30} round={true} />
+                        </WhatsappShareButton>
+                      </div>
+                      <div className="p-2">
+                        <EmailShareButton url={item.file.url} onClick={() => closeDropdown(index)}>
+                          <EmailIcon size={30} round={true} />
+                        </EmailShareButton>
+                      </div>
+                    </div>
+                  )}
+                 <button
+                    type="button"
+                    className=""
+                    onClick={() => toggleDropdown(index)}
+                  >
+                    <ShareIcon />
+                  </button>
            <span className="block font-semibold">{item.headline}</span>
               <span className="block text-gray-700">
                 {expandedItems[item._id]

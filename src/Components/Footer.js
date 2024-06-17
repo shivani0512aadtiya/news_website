@@ -45,6 +45,10 @@ const Footer = () => {
             <p className="text-sm">&copy; 2024 Flowbite.Rishus Infotech</p>
             </a>
             <div className="flex space-x-4 mt-4 md:mt-0">
+            <span className="items-between text-sm">
+            <p>Shubham Meena</p>
+            <p>8529637412</p>
+            </span>
               <a
                 href="https://facebook.com"
                 className="text-gray-400 hover:text-white"

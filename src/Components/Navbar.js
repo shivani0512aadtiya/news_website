@@ -9,6 +9,9 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+const closeMenu = () => {
+  setIsOpen(false); 
+};
 
   return (
     <>
@@ -33,36 +36,42 @@ const Navbar = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
                   to="/"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   होम
                 </Link>
                 <Link
                   to="/news"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   न्यूज़
                 </Link>
                 <Link
                   to="/state"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   राज्य
                 </Link>
                 <Link
                   to="/election"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   चुनाव
                 </Link>
                 <Link
                   to="/entertainment"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   मनोरंजन/खेल
                 </Link>
                 <Link
                   to="/tech"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   टेक्नोलॉजी
@@ -70,16 +79,11 @@ const Navbar = () => {
         
                 <Link
                   to="/education"
+                  onClick={closeMenu}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
                 >
                   शिक्षा
                 </Link>
-                {/* <Link
-                  to="/login"
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
-                >
-                  लॉगिन
-                </Link> */}
               </div>
             </div>
             <div className="flex md:hidden">
@@ -134,42 +138,49 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
                 to="/"
+                onClick={closeMenu}
                 className="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-white"
               >
                  होम
               </Link>
               <Link
                 to="/news"
+                onClick={closeMenu}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                न्यूज़
               </Link>
               <Link
-                to="/khategaon"
+                to="/state"
+                onClick={closeMenu}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                 राज्य
               </Link>
               <Link
-                to="/kannod"
+                  to="/election"
+                  onClick={closeMenu}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
+                >
+                  चुनाव
+                </Link>
+              <Link
+                to="/entertainment"
+                onClick={closeMenu}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                 मनोरंजन
               </Link>
               <Link
-                to="/nemawar"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
-              >
-                खेल
-              </Link>
-              <Link
-                to="/dewas"
+                to="/tech"
+                onClick={closeMenu}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                 टेक्नोलॉजी
               </Link>
               <Link
-                to="/dewas"
+                to="/education"
+                onClick={closeMenu}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
               >
                 शिक्षा
@@ -183,3 +194,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
