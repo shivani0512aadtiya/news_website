@@ -134,17 +134,25 @@ const State = () => {
                  {openDropdowns[id] && (
                     <div className="flex bg-white shadow-lg rounded absolute left-80 ml-2">
                       <div className="p-2">
-                        <FacebookShareButton url={item.file.url} onClick={() => closeDropdown(id)}>
+                        <FacebookShareButton url={item.file.url}
+                        quote={`${item.headline} - ${item.description}`}
+                        onClick={() => closeDropdown(id)}>
                           <FacebookIcon size={30} round={true} />
                         </FacebookShareButton>
                       </div>
                       <div className="p-2">
-                        <WhatsappShareButton url={item.file.url} onClick={() => closeDropdown(id)}>
+                        <WhatsappShareButton url={item.file.url}
+                        title={`${item.headline} - ${item.description}`}
+                        separator=" - "
+                        onClick={() => closeDropdown(id)}>
                           <WhatsappIcon size={30} round={true} />
                         </WhatsappShareButton>
                       </div>
                       <div className="p-2">
-                        <EmailShareButton url={item.file.url} onClick={() => closeDropdown(id)}>
+                        <EmailShareButton url={item.file.url}
+                         subject={item.headline}
+                         body={`${item.headline}\n\n${item.description}\n\n${item.file.url}`}
+                        onClick={() => closeDropdown(id)}>
                           <EmailIcon size={30} round={true} />
                         </EmailShareButton>
                       </div>

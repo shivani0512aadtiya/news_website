@@ -105,17 +105,25 @@ const Cards = () => {
                 {openDropdowns[index] && (
                     <div className="absolute flex left-auto ml-8 bg-white shadow-lg rounded">
                       <div className="p-2">
-                        <FacebookShareButton url={item.url} onClick={() => closeDropdown(index)}>
+                         <FacebookShareButton url={item.image.url}
+                         quote={`${item.headline} - ${item.description}`}
+                         onClick={() => closeDropdown(index)}>
                           <FacebookIcon size={30} round={true} />
-                        </FacebookShareButton>
+                        </FacebookShareButton>   
                       </div>
                       <div className="p-2">
-                        <WhatsappShareButton url={item.url} onClick={() => closeDropdown(index)}>
+                        <WhatsappShareButton url={item.image.url}
+                        title={`${item.headline} - ${item.description}`}
+                        separator=" - "
+                        onClick={() => closeDropdown(index)}>
                           <WhatsappIcon size={30} round={true} />
                         </WhatsappShareButton>
                       </div>
                       <div className="p-2">
-                        <EmailShareButton url={item.url} onClick={() => closeDropdown(index)}>
+                        <EmailShareButton url={item.image.url}
+                        subject={item.headline}
+                        body={`${item.headline}\n\n${item.description}\n\n${item.image.url}`}
+                        onClick={() => closeDropdown(index)}>
                           <EmailIcon size={30} round={true} />
                         </EmailShareButton>
                       </div>

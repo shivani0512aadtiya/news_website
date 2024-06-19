@@ -104,17 +104,25 @@ function Election1() {
                 {openDropdowns[index] && (
                   <div className="absolute flex left-24 bg-white shadow-lg">
                     <div className="p-2">
-                      <FacebookShareButton url={item.file.url} onClick={() => closeDropdown(index)}>
+                      <FacebookShareButton url={item.file.url}
+                      quote={`${item.headline} - ${item.description}`}
+                      onClick={() => closeDropdown(index)}>
                         <FacebookIcon size={30} round={true} />
                       </FacebookShareButton>
                     </div>
                     <div className="p-2">
-                      <WhatsappShareButton url={item.file.url} onClick={() => closeDropdown(index)}>
+                      <WhatsappShareButton url={item.file.url}
+                      title={`${item.headline} - ${item.description}`}
+                        separator=" - "
+                      onClick={() => closeDropdown(index)}>
                         <WhatsappIcon size={30} round={true} />
                       </WhatsappShareButton>
                     </div>
                     <div className="p-2">
-                      <EmailShareButton url={item.file.url} onClick={() => closeDropdown(index)}>
+                      <EmailShareButton url={item.file.url}
+                      subject={item.headline}
+                      body={`${item.headline}\n\n${item.description}\n\n${item.file.url}`}
+                      onClick={() => closeDropdown(index)}>
                         <EmailIcon size={30} round={true} />
                       </EmailShareButton>
                     </div>

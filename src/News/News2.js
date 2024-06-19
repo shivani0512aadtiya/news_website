@@ -59,6 +59,7 @@ const News2 = () => {
       [index]: false,
     }));
   };
+  
 
   return (
     <div className="container mx-auto mt-4">
@@ -80,32 +81,42 @@ const News2 = () => {
                   </div>
                 )}
                 <div className="p-2">
+                <div className='flex justify-end mt-2'>
                 {openDropdowns[index] && (
-                    <div className="absolute flex left-auto ml-8 bg-white shadow-lg rounded">
+                    <div className="absolute flex left-20  bg-white shadow-lg rounded">
                       <div className="p-2">
-                        <FacebookShareButton url={item.url} onClick={() => closeDropdown(index)}>
+                        <FacebookShareButton url={item.file.url}
+                        quote={`${item.headline} - ${item.description}`}
+                        onClick={() => closeDropdown(index)}>
                           <FacebookIcon size={30} round={true} />
                         </FacebookShareButton>
                       </div>
                       <div className="p-2">
-                        <WhatsappShareButton url={item.url} onClick={() => closeDropdown(index)}>
+                        <WhatsappShareButton url={item.file.url}
+                        title={`${item.headline} - ${item.description}`}
+                        separator=" - "
+                        onClick={() => closeDropdown(index)}>
                           <WhatsappIcon size={30} round={true} />
                         </WhatsappShareButton>
                       </div>
                       <div className="p-2">
-                        <EmailShareButton url={item.url} onClick={() => closeDropdown(index)}>
+                        <EmailShareButton url={item.file.url}
+                        subject={item.headline}
+                        body={`${item.headline}\n\n${item.description}\n\n${item.file.url}`}
+                        onClick={() => closeDropdown(index)}>
                           <EmailIcon size={30} round={true} />
                         </EmailShareButton>
                       </div>
                     </div>
                   )}
-                  <button
+                 <button
                     type="button"
-                    className="flex items-center justify-center p-2 text-gray-500"
+                    className=""
                     onClick={() => toggleDropdown(index)}
                   >
                     <ShareIcon />
                   </button>
+                </div>
                   <h2 className="text-xl font-semibold">{item.headline}</h2>
                   <p className="text-gray-700">{truncateDescription(item.description, 50)}</p>
                   <Link to={`/news2/${item._id}`} className="flex-1">
