@@ -18,6 +18,7 @@ import Mainelection from './Election/Mainelection';
 import CardDetails from './Card1/CardDetails';
 import News2details from './News/News2details';
 import Details from './States/Details';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -56,6 +57,15 @@ const App = () => {
           <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login setIsAuthenticated={setIsAuthenticated} />} />
           <Route path="/admin" element={<Admins isAuthenticated={isAuthenticated} handleLogout={handleLogout} />} />
         </Routes>
+      </div>
+      <div>
+      <FloatingWhatsApp
+        className='h-4 w-8'
+        textReply="Welcome To Times Now India 24/7, how can I help you?"
+        phoneNumber="+919926890112"
+        accountName="Shubham Meena"
+        profileImage="/img/Tni 1.png"
+      />
       </div>
       <Footer />
     </>

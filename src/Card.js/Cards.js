@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { useAuth } from '../Admineditor.js/AuthProvider';
 import Addcard from '../Card.js/Addcard';
 import {
@@ -18,7 +18,7 @@ const Cards = () => {
   const [cards, setCards] = useState([]);
   const [loading,setLoading]= useState("");
   const [openDropdowns, setOpenDropdowns] = useState({});
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
    const navigation = (id) => {
     navigate(`/card/${id}`);

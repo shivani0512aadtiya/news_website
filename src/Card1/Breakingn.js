@@ -124,8 +124,7 @@ const Breakingn = () => {
     <p><TextsmsIcon /> ओपिनियन</p>
       </form>
         </div>
-
-        <div className="w-full md:w-2/4 overflow-hidden relative rounded-lg shadow-lg p-4 mb-4 md:mb-0">
+<div className="w-full md:w-2/4 relative rounded-lg shadow-lg p-4 mb-4 md:mb-0">
   {loading ? (
     <p>Loading...</p>
   ) : (
@@ -134,16 +133,18 @@ const Breakingn = () => {
         <div className="flex overflow-hidden mt-8">
           <div
             className="flex transition-transform duration-1000"
-            style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `${Math.min(images.length, 3) * 100}%` }}
+            style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `${images.length * 100}%` }}
           >
             {images.map((item, index) => (
-              <div key={index} className="w-full flex-shrink-0 space-y-4">
-                <Link to={`/breaking/${item._id}`}>
+              <div key={index} className="w-full flex-shrink-0 flex flex-col items-center space-y-4">
+                <Link to={`/breaking/${item._id}`} className="w-full">
                   {item.file && item.file.url && (
-                    <img src={item.file.url} alt={item.url} className="h-48 md:h-64 lg:h-64 w-full object-contain" loading="lazy" />
+                    <img src={item.file.url} alt={item.url} className="h-48 sm:h-64 md:h-64 lg:h-80 w-full object-contain" loading="lazy" />
                   )}
                   {item.headline && (
-                    <h2 className="text-center pt-4 font-semibold relative text-2xl md:text-3xl lg:text-4xl text-black">{item.headline}</h2>
+                    <h2 className="text-center pt-4 font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl text-black break-words whitespace-normal">
+                      {item.headline}
+                    </h2>
                   )}
                 </Link>
                 {isAuthenticated && (
@@ -172,10 +173,13 @@ const Breakingn = () => {
         </div>
       </>
     ) : (
-      <p>{loading}</p>
+      <p>No images available</p>
     )
   )}
 </div>
+
+
+
 <div className="w-full md:w-80 bg-white rounded-lg shadow-lg p-4 overflow-hidden">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
     {video.map((vid, id) => (

@@ -139,49 +139,49 @@ const closeMenu = () => {
               <Link
                 to="/"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-white"
+                className="block px-3 py-2 rounded-md text-base font-medium text-blue-700 dark:text-dark"
               >
                  होम
               </Link>
               <Link
                 to="/news"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-dark dark:hover:text-blue-500"
               >
                न्यूज़
               </Link>
               <Link
                 to="/state"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-dark dark:hover:text-blue-500"
               >
                 राज्य
               </Link>
               <Link
                   to="/election"
                   onClick={closeMenu}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-blue-700 dark:text-black dark:hover:text-blue-500"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-dark dark:hover:text-blue-500"
                 >
                   चुनाव
                 </Link>
               <Link
                 to="/entertainment"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-dark dark:hover:text-blue-500"
               >
                 मनोरंजन
               </Link>
               <Link
                 to="/tech"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-dark dark:hover:text-blue-500"
               >
                 टेक्नोलॉजी
               </Link>
               <Link
                 to="/education"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-700 dark:text-dark dark:hover:text-blue-500"
               >
                 शिक्षा
               </Link>

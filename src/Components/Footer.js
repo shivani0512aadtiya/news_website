@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Footer = () => {
   return (
@@ -46,12 +45,10 @@ const Footer = () => {
             <p className="text-sm">&copy; 2024.Rishus Infotech</p>
             </a>
             <div className="flex space-x-4 mt-4 md:mt-0">
-        <div className="container">
           <span className="flex space-x-8 name-icon">
              <p>Shubham Meena</p>
+             <p className="phone-number">9926890112</p>
          </span>
-            <p className="phone-number">9926890112</p>
-           </div>
               <a
                 href="https://facebook.com"
                 className="text-gray-400 hover:text-white"
